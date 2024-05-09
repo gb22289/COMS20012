@@ -3,12 +3,15 @@
 ## Intro to Cryptography 
 
 1. What are the two basic functions used in encryption algorithms?
-2. How many keys are required for two people to communicate via a cipher?
-3. What is the difference between a block cipher and a stream cipher?
-4. What are the two general approaches to attacking a cipher?
-5. What is a trap-door one-way function?
-6. What requirements must a public-key cryptosystems fulfill to be a secure algorithm?
-7. What is the difference between a message authentication code and a one-way hash function?
+   Substitution and Transposition
+3. How many keys are required for two people to communicate via a cipher?
+   One when using a symmetric cipher, two when using an assymetric cipher?
+5. What is the difference between a block cipher and a stream cipher?
+   
+7. What are the two general approaches to attacking a cipher?
+8. What is a trap-door one-way function?
+9. What requirements must a public-key cryptosystems fulfill to be a secure algorithm?
+10. What is the difference between a message authentication code and a one-way hash function?
 
 
 ## Answers
