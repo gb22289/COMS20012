@@ -7,11 +7,13 @@
 3. How many keys are required for two people to communicate via a cipher?
    One when using a symmetric cipher, two when using an assymetric cipher?
 5. What is the difference between a block cipher and a stream cipher?
-   
+   Block ciphers encrypt plaintext in blocks of predetermined size, whereas stream ciphers encrypt a digital data stream bit by bit
 7. What are the two general approaches to attacking a cipher?
-8. What is a trap-door one-way function?
-9. What requirements must a public-key cryptosystems fulfill to be a secure algorithm?
-10. What is the difference between a message authentication code and a one-way hash function?
+   Cryptanalysis or Brute force
+9. What is a trap-door one-way function?
+    A function that is easy to calculate one way but infeasible the other direction. This is unless you know additional information.
+11. What requirements must a public-key cryptosystems fulfill to be a secure algorithm?
+12. What is the difference between a message authentication code and a one-way hash function?
 
 
 ## Answers
