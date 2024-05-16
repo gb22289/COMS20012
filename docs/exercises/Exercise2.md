@@ -5,7 +5,7 @@
 1. What are the two basic functions used in encryption algorithms?
    Substitution and Transposition
 3. How many keys are required for two people to communicate via a cipher?
-   One when using a symmetric cipher, two when using an assymetric cipher?
+   One when using a symmetric cipher, two when using an assymetric cipher
 5. What is the difference between a block cipher and a stream cipher?
    Block ciphers encrypt plaintext in blocks of predetermined size, whereas stream ciphers encrypt a digital data stream bit by bit
 7. What are the two general approaches to attacking a cipher?
@@ -14,6 +14,7 @@
     A function that is easy to calculate one way but infeasible the other direction. This is unless you know additional information.
 11. What requirements must a public-key cryptosystems fulfill to be a secure algorithm?
 12. What is the difference between a message authentication code and a one-way hash function?
+    
 
 
 ## Answers
@@ -29,10 +30,15 @@
 ## Intro to Networking 
 
 1. What is the difference between ISO/OSI model and TCP/IP model? Elaborate!
-2. Explain difference between Physical Links, Data Links, and Routes!
-3. Which is a security attack at layer 1 of the OSI model?
-4. What is a replay attack?
-5. Suppose that the current replay window spans from 120 to 530.
+   OSI is a generic model based on the functionalities in each layer. TCP/IP is a more realistic model based on the protocols in each layer.
+   OSI model has 7 layers Application Presentation Session Transportation Network Data Link Physical whereas TCP/IP has Physical Data Link Network Transport Application
+   OSI model is just guidelines, whereas TCP/IP is a more practical implementation of protocols used on the internet
+3. Explain difference between Physical Links, Data Links, and Routes!
+   Physical links are connections through ethernet cables from the host computer to the switch. Data link is the path a frame takes across a single network
+5. Which is a security attack at layer 1 of the OSI model?
+   DoS
+6. What is a replay attack?
+7. Suppose that the current replay window spans from 120 to 530.
 a. If the next incoming authenticated packet has sequence number 105, what will the receiver do with the packet, and what will be the parameters of the window after that?
 b. If instead the next incoming authenticated packet has sequence number 440, what will the receiver do with the packet, and what will be the parameters of the window after that?
 c. If instead the next incoming authenticated packet has sequence number 540, what will the receiver do with the packet, and what will be the parameters of the window after that?
