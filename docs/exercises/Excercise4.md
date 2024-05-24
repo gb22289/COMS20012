@@ -3,30 +3,41 @@
 ## WEB Security
 
 1. What is the impact of a successful SQL injection attack? Do you know any SQL injection examples?
+   It can vary from deleting tables, gain access to unauthorised data or even modifying the data itself. A common example is the Union attack where you can use the SQL keyword UNION to get data from other tables.
 
-2. What are the types of XSS attacks? Explain! What is the difference between them?
+3. What are the types of XSS attacks? Explain! What is the difference between them?
+   Reflected XSS is where the attack comes from the current HTTP request
+   Stored XSS is where the malicious script comes from the website's database
+   DOM-based XSS is where the vulnerability exists in the client-side code instead of the server-side code
 
-3. List three design goals for a firewall.
+5. List three design goals for a firewall.
+   All traffic going in or out of the network must go through the firewall.
+   Only unauthorised traffic is not allowed to go through the firewall.
+   The ideal assumption is that the firewall is inpenetrable
 
-4. What are some weaknesses of a packet filtering firewall?
+7. What are some weaknesses of a packet filtering firewall?
+   There is a lack of upper-layer functionality
+    Does not support advanced user authentication schemes
 
-5. What is the difference between a packet filtering firewall and a stateful inspection firewall?
 
-6. One approach to defeating the tiny fragment attack is to enforce a minimum length of the transport header that must be contained in the first fragment of an IP packet. If the first fragment is rejected, all subsequent fragments can be rejected. However, the nature of IP is such that fragments may arrive out of order. Thus, an intermediate fragment may pass through the filter before the initial fragment is rejected. How can this situation be handled?
 
-7. A common management requirement is that “all external Web traffic must flow via the organization’s Web proxy.” However, that requirement is easier stated than implemented. Discuss the various problems and issues, possible solutions, and limitations with supporting this requirement. In particular consider issues such as identifying exactly what constitutes “Web traffic” and how it may be monitored, given the large range of ports and various protocols used by Web browsers and servers.
+9. What is the difference between a packet filtering firewall and a stateful inspection firewall?
 
-8. What are two common techniques used to protect a password file?
+10. One approach to defeating the tiny fragment attack is to enforce a minimum length of the transport header that must be contained in the first fragment of an IP packet. If the first fragment is rejected, all subsequent fragments can be rejected. However, the nature of IP is such that fragments may arrive out of order. Thus, an intermediate fragment may pass through the filter before the initial fragment is rejected. How can this situation be handled?
 
-9. Why is it useful to have host-based firewalls?
+11. A common management requirement is that “all external Web traffic must flow via the organization’s Web proxy.” However, that requirement is easier stated than implemented. Discuss the various problems and issues, possible solutions, and limitations with supporting this requirement. In particular consider issues such as identifying exactly what constitutes “Web traffic” and how it may be monitored, given the large range of ports and various protocols used by Web browsers and servers.
 
-10. What are three benefits that can be provided by an intrusion detection system?
+12. What are two common techniques used to protect a password file?
 
-11. What is the difference between statistical anomaly detection and rule-based intrusion detection?
+13. Why is it useful to have host-based firewalls?
 
-12. What metrics are useful for profile-based intrusion detection?
+14. What are three benefits that can be provided by an intrusion detection system?
 
-13. An example of a host-based intrusion detection tool is the tripwire program (you can google about it). This is a file integrity checking tool that scans files and directories on the system on a regular basis and notifies the administrator of any changes. It uses a protected database of cryptographic checksums for each file checked and compares this value with that recomputed on each file as it is scanned. It must be configured with a list of files and directories to check, and what changes, if any, are permissible to each. It can allow, for example, log files to have new entries appended, but not for existing entries to be changed. What are the advantages and disadvantages of using such a tool? Think! Consider the problem of determining which files should only change rarely, which files may change more often and how, and which change frequently and hence cannot be checked. Hence consider the amount of work in both the configuration of the program and on the system administrator monitoring the responses generated.
+15. What is the difference between statistical anomaly detection and rule-based intrusion detection?
+
+16. What metrics are useful for profile-based intrusion detection?
+
+17. An example of a host-based intrusion detection tool is the tripwire program (you can google about it). This is a file integrity checking tool that scans files and directories on the system on a regular basis and notifies the administrator of any changes. It uses a protected database of cryptographic checksums for each file checked and compares this value with that recomputed on each file as it is scanned. It must be configured with a list of files and directories to check, and what changes, if any, are permissible to each. It can allow, for example, log files to have new entries appended, but not for existing entries to be changed. What are the advantages and disadvantages of using such a tool? Think! Consider the problem of determining which files should only change rarely, which files may change more often and how, and which change frequently and hence cannot be checked. Hence consider the amount of work in both the configuration of the program and on the system administrator monitoring the responses generated.
 
 
 
