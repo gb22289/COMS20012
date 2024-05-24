@@ -5,30 +5,39 @@
 1. Investigate the network access control scheme used at your school or place of employment (if you work somewhere). Draw a diagram and describe the principal components. **This question has an aim to make you investigate and there is no uniform answer. You are strongly encouraged to ask our guest lecturer about our University access control.**
 
 2. Explain DNS cache poisoning.
+   DNS cache poisoning is when an attacker changes a DNS cache to point to a malicious IP address instead of the legitemate one
 
-3. What is SamSam malware? How deos it work? What are the famous ransomware attacks in the UK?
+4. What is SamSam malware? How deos it work? What are the famous ransomware attacks in the UK?
+   SamSam malware is a ransomware that spies on users for a long time after the initial infection. Through this monitoring, they find vulnerabilities in an organisation and eventually make their data inaccessible through encryption, asking for a ransom to give the files back.
 
-4. Should I use DoH or DoT? Convince me!
+6. Should I use DoH or DoT? Convince me!
+   DoT is better if you care more about network security, as network admins have the ability to reject requests from certain DNS adresses which can help prevent infection.
+   DoH is better if you care more about privacy, as the requests are hidden in the flow of other HTTPS traffic. This gives less visibility to the network admin but more privacy to the users of the network.
 
-5. What is the purpose of HTTPS?
+8. What is the purpose of HTTPS?
+   To provide a secure channel for communication using asymmetric encryption using TLS (SSL).
 
-6. What is the goal of the TCP session hijacker? How can we prevent it? 
+10. What is the goal of the TCP session hijacker? How can we prevent it?
+  The goal is the monitor the network traffic and intercept session cookies to use the session key to impersonate the user and perform actions. Using HTTPS encrypts network traffic so that prevents this.
 
-7. For what applications is SSH useful?
+12. For what applications is SSH useful?
+    SSH is useful for file transfer and email.
 
-8. What is the difference between SYN Flooding Attack and TCP session hijacking? Can we prevent them? How? 
+14. What is the difference between SYN Flooding Attack and TCP session hijacking? Can we prevent them? How?
+    SYN flooding attack floods the server with lots of SYN requests from multiple devices, causing performance issues and slowing response time heavily. While TCP session hijacking is where an attacker sniffs network traffic to get session cookies to impersonate a user and perform actions on their behalf.
 
-9. Where does IPsec reside in a protocol stack?
+16. Where does IPsec reside in a protocol stack?
+    IPSec is below the transport layer
 
-10. What is DHCP? How useful is it to help achieve security of IP addresses?
+18. What is DHCP? How useful is it to help achieve security of IP addresses?
 
-11. How does ARP Spoofing facilitate MITM attack?  
+19. How does ARP Spoofing facilitate MITM attack?  
 
-12. Is Wireless networking more susceptible to eavesdropping and jamming than wired networks? Elaborate! Why/why not?
+20. Is Wireless networking more susceptible to eavesdropping and jamming than wired networks? Elaborate! Why/why not?
 
-13. What was the largest DDoS attack of all time? Is it still the largest? Investigate! What are other famous DDoS attack? Can you explain how they were performed?
+21. What was the largest DDoS attack of all time? Is it still the largest? Investigate! What are other famous DDoS attack? Can you explain how they were performed?
 
-14. In IEEE 802.11, open system authentication simply consists of two communications. An authentication is requested by the client, which contains the station ID (typically the MAC address). This is followed by an authentication response from the AP/router containing a success or failure message. An example of when a failure may occur is if the client’s MAC address is explicitly excluded in the AP/router configuration.
+22. In IEEE 802.11, open system authentication simply consists of two communications. An authentication is requested by the client, which contains the station ID (typically the MAC address). This is followed by an authentication response from the AP/router containing a success or failure message. An example of when a failure may occur is if the client’s MAC address is explicitly excluded in the AP/router configuration.
 a. What are the benefits of this authentication scheme?
 b. What are the security vulnerabilities of this authentication scheme?
 
