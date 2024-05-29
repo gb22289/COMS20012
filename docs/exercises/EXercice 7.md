@@ -12,11 +12,11 @@
    The rings denote different privelege levels of proccesses running on a computer. On intel, ring 0 is where the kernel operates, ring 1-2 is where some drivers or VMs might run but is not used as much, ring 3 is where most "normal" processes are run.
    For MIPS, there is only the user mode and kernel mode, which is similar to ring 3 and ring 0 respectively. User mode allows access the CPU register, flat uniform virtual memory address space. Kernel allows access memory mapping hardware, special registers
 5. Explain in your own words what is the main role of an operating system
-
+   An operating system provides multiplexing for hardware resources and abstractions for resources.
 6. How can we trigger a change in modes?
-
+   Sleeping beauty through system call, trap, or interrupt or alarm clock.
 7. What happens after a trap has been invoked.
-
+   The cause of the trap is handled, and after the processor returns to its previous task
    <!--
 
 
