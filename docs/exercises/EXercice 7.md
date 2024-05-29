@@ -4,14 +4,18 @@
 ## OS structure
 
 1. Compare System call, interrupt, and trap, give examples for each of them to be triggered
+   System calls are a way for programs to interact with the OS. A program makes a system call when it sends a request to the OS' kernel
+   Traps are an unintended request to system services, usually by some sort of fault. They result synchronously with the execution of a program.
+   Interrupts are signals sent to the processor that interrupt the current thread's execution. It can be generate by both hardware and software.
 
-2. Explain the concept of rings on Intel architecture. Compare to privilege level on MIPS architecture.
+3. Explain the concept of rings on Intel architecture. Compare to privilege level on MIPS architecture.
+   The rings denote different privelege levels of proccesses running on a computer. On intel, ring 0 is where the kernel operates, ring 1-2 is where some drivers or VMs might run but is not used as much, ring 3 is where most "normal" processes are run.
+   For MIPS, there is only the user mode and kernel mode, which is similar to ring 3 and ring 0 respectively. User mode allows access the CPU register, flat uniform virtual memory address space. Kernel allows access memory mapping hardware, special registers
+5. Explain in your own words what is the main role of an operating system
 
-3. Explain in your own words what is the main role of an operating system
+6. How can we trigger a change in modes?
 
-4. How can we trigger a change in modes?
-
-5. What happens after a trap has been invoked.
+7. What happens after a trap has been invoked.
 
    <!--
 
