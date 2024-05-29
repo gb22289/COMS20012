@@ -4,11 +4,13 @@
 
 
 1. What is a spatial memory safety violation?
+   It is an instance where a program accesses memory outside the bounds that it was allocated.
 
-2. In the reading [article](http://www.pl-enthusiast.net/2014/07/21/memory-safety/)  by Prof. hicks, he provides a definition of memory safety as *No accesses to undefined memory*. Later he argues that it does not cover buffer overflows. Can you explain why so?
+3. In the reading [article](http://www.pl-enthusiast.net/2014/07/21/memory-safety/)  by Prof. hicks, he provides a definition of memory safety as *No accesses to undefined memory*. Later he argues that it does not cover buffer overflows. Can you explain why so?
+   Buffer overflow doesn't necessarily mean that the memory that was accessed was undefined, it may have been used by another program.
 
 	
-3. Consider the following code:  
+5. Consider the following code:  
     ```
     void main(){
     	int count=0;
@@ -27,15 +29,15 @@
     Answer the following questions.
 
     	a. What memory error does this code have?
-
+	Spacial memory safety violation
  	b. What is the source of that memory error?
-
+        gets(name) can overflow name if the string is more than 20 characters long
  	c. Which variables may be corrupted by that error?
-
+        y and z
  	d. How can you fix that error?
+        Use a safe method of gets like fgets
 
-
-4. Consider the following code:
+6. Consider the following code:
     ```
     //loop.c
     #include <stdio.h>
@@ -55,12 +57,12 @@
      Compile the code with `gcc -m32 -fno-stack-protector loop.c -o loop32` and run it. On my machine, the code goes in an infinite loop. Can you find a probable cause for this?
 
      
-5. What is control hijacking in the context of exploitation? Explain one possible way to hijack control in the presence of stack overflow bug?
+7. What is control hijacking in the context of exploitation? Explain one possible way to hijack control in the presence of stack overflow bug?
+   Taking control of the execution of the code, perhaps making it go down unintended paths of execution. One way to accomplish this is to overwrite the return address of a function to somewhere else where the attacker desires.
 
 
-
-6. What is a format string bug? 
-
+8. What is a format string bug? 
+   A memory bug that can lead to the contents of the stack being leaked. %n can also cause overwriting of a memory location.
 
 ## Answers
 
